@@ -8,5 +8,15 @@
 
 import Foundation
 
-print("Hello, World!")
-
+if let path = Options.read() {
+    let input = Input(path: path)
+    if let content = input.read() {
+        if let shop = Paintshop(string: content) {
+            let solver = Solver(paintshop: shop)
+            let result = solver.solve()
+            print("\(result)")
+        } else {
+            print("Error parsing input file.")
+        }
+    }
+}

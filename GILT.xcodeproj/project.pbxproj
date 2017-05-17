@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8786E6481ECC8A57007CBDBE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6471ECC8A57007CBDBE /* main.swift */; };
+		8786E6501ECCD782007CBDBE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E64F1ECCD782007CBDBE /* Color.swift */; };
+		8786E6521ECCD798007CBDBE /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6511ECCD798007CBDBE /* Customer.swift */; };
+		8786E6541ECCD7BE007CBDBE /* Paintshop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6531ECCD7BE007CBDBE /* Paintshop.swift */; };
+		8786E6571ECCD94E007CBDBE /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6561ECCD94E007CBDBE /* Options.swift */; };
+		8786E6591ECCD966007CBDBE /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6581ECCD966007CBDBE /* Input.swift */; };
+		8786E65B1ECCF239007CBDBE /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E65A1ECCF239007CBDBE /* Solver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,12 @@
 /* Begin PBXFileReference section */
 		8786E6441ECC8A57007CBDBE /* GILT */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GILT; sourceTree = BUILT_PRODUCTS_DIR; };
 		8786E6471ECC8A57007CBDBE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8786E64F1ECCD782007CBDBE /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = Models/Color.swift; sourceTree = "<group>"; };
+		8786E6511ECCD798007CBDBE /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Customer.swift; path = Models/Customer.swift; sourceTree = "<group>"; };
+		8786E6531ECCD7BE007CBDBE /* Paintshop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Paintshop.swift; path = Models/Paintshop.swift; sourceTree = "<group>"; };
+		8786E6561ECCD94E007CBDBE /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Options.swift; path = Controllers/Options.swift; sourceTree = "<group>"; };
+		8786E6581ECCD966007CBDBE /* Input.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Input.swift; path = Controllers/Input.swift; sourceTree = "<group>"; };
+		8786E65A1ECCF239007CBDBE /* Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Solver.swift; path = Controllers/Solver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +69,31 @@
 		8786E6461ECC8A57007CBDBE /* GILT */ = {
 			isa = PBXGroup;
 			children = (
+				8786E6551ECCD907007CBDBE /* Controllers */,
+				8786E64E1ECC9B8C007CBDBE /* Models */,
 				8786E6471ECC8A57007CBDBE /* main.swift */,
 			);
 			path = GILT;
+			sourceTree = "<group>";
+		};
+		8786E64E1ECC9B8C007CBDBE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8786E64F1ECCD782007CBDBE /* Color.swift */,
+				8786E6511ECCD798007CBDBE /* Customer.swift */,
+				8786E6531ECCD7BE007CBDBE /* Paintshop.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8786E6551ECCD907007CBDBE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8786E6561ECCD94E007CBDBE /* Options.swift */,
+				8786E6581ECCD966007CBDBE /* Input.swift */,
+				8786E65A1ECCF239007CBDBE /* Solver.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,7 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8786E6591ECCD966007CBDBE /* Input.swift in Sources */,
+				8786E6541ECCD7BE007CBDBE /* Paintshop.swift in Sources */,
+				8786E6521ECCD798007CBDBE /* Customer.swift in Sources */,
 				8786E6481ECC8A57007CBDBE /* main.swift in Sources */,
+				8786E6571ECCD94E007CBDBE /* Options.swift in Sources */,
+				8786E65B1ECCF239007CBDBE /* Solver.swift in Sources */,
+				8786E6501ECCD782007CBDBE /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
