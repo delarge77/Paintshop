@@ -12,68 +12,49 @@ struct Solver {
     let paintshop: Paintshop
     
     func solve() -> String {
-        var results: [Int: Color.Finish] = [:]
+        var solution: [Int: Color.Finish] = [:]
         let sortedCustomers = paintshop.customers.sorted { $0.colors.count < $1.colors.count }
         
         for customer in sortedCustomers {
-            guard let color = candidateForCustomer(customer, results: results) else {
-                if customer.satisfiedBy(results) {
+            guard let color = candidateFor(customer, solution: solution) else {
+                if customer.satisfiedWith(solution) {
                     continue
                 } else {
                     return "No solution exists."
                 }
             }
             
-            results[color.id] = color.finish
+            solution[color.id] = color.finish
         }
         
-        return output(results: results)
+        return complete(solution)
     }
     
-    // Returns the user's color option if it isn't in the results yet
-    // If the user is not satisfied, it returns `nil` meaning no solution exists
-    // Obs. This method should be used only for single option users
-    
-    private func candidateForCustomer(_ customer: Customer, results: [Int: Color.Finish]) -> Color? {
+    private func candidateFor(_ customer: Customer, solution: [Int: Color.Finish]) -> Color? {
         if customer.colors.count == 1 {
             guard let color = customer.colors.first else {
                 return nil
             }
             
-            if let finish = results[color.id], finish != color.finish {
+            if let finish = solution[color.id], finish != color.finish {
                 return nil
             } else {
                 return color
             }
         } else {
-            var colors: [Color] = []
-            for color in customer.colors {
-                if let finish = results[color.id] {
-                    if finish == color.finish {
-                        return nil
-                    }
-                } else {
-                    colors.append(color)
-                }
+            if customer.colors.filter({ solution[$0.id] == $0.finish }).count > 0 {
+                return nil
             }
             
-            // Try to find a gloss option, otherwise use matte
-            var result = colors.first
-            for color in colors {
-                if color.finish == .Gloss {
-                    result = color
-                    break
-                }
-            }
-            
-            return result
+            let colors = customer.colors.filter { solution[$0.id] == nil }
+            return colors.filter { $0.finish == .Gloss }.first ?? colors.first
         }
     }
     
-    private func output(results: [Int: Color.Finish]) -> String {
+    private func complete(_ solution: [Int: Color.Finish]) -> String {
         var output: [Color.Finish] = []
         for id in 1..<(paintshop.numberOfColors + 1) {
-            if let finish = results[id] {
+            if let finish = solution[id] {
                 output.append(finish)
             } else {
                 output.append(.Gloss)

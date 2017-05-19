@@ -33,7 +33,7 @@ extension Customer {
         self.colors = colors
     }
     
-    func satisfiedBy(_ solution: [Int: Color.Finish]) -> Bool {
+    func satisfiedWith(_ solution: [Int: Color.Finish]) -> Bool {
         for color in colors {
             if solution[color.id] == color.finish {
                 return true

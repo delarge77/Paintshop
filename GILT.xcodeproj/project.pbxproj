@@ -110,10 +110,10 @@
 				87185D9D1ECE0F3000F9CCA8 /* invalid.txt */,
 				87185D931ECE0EDD00F9CCA8 /* fixture1.txt */,
 				87185D941ECE0EDD00F9CCA8 /* fixture2.txt */,
+				87212DCD1ECF792500067B75 /* fixture6.txt */,
 				87185D951ECE0EDD00F9CCA8 /* fixture3.txt */,
 				87185D961ECE0EDD00F9CCA8 /* fixture4.txt */,
 				87185D971ECE0EDD00F9CCA8 /* fixture5.txt */,
-				87212DCD1ECF792500067B75 /* fixture6.txt */,
 			);
 			name = fixtures;
 			sourceTree = "<group>";
