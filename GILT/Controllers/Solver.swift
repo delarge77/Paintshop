@@ -16,34 +16,15 @@ struct Solver {
         let sortedCustomers = paintshop.customers.sorted { $0.colors.count < $1.colors.count }
         
         for customer in sortedCustomers {
-            if customer.colors.count == 1 {
-                guard let color = candidateForCustomer(customer, results: results) else {
-                    return "No solution exists."
-                }
-                results[color.id] = color.finish
-            } else {
-                guard let candidates = candidatesForCustomer(customer, results: results) else {
-                    return "No solution exists."
-                }
-                
-                // If the customer is already satisfied, goes to the next one
-                if candidates.count == 0 {
+            guard let color = candidateForCustomer(customer, results: results) else {
+                if customer.satisfiedBy(results) {
                     continue
-                }
-                
-                // Try to find a gloss option, otherwise use matte
-                var result = candidates.first
-                for color in candidates {
-                    if color.finish == .Gloss {
-                        result = color
-                        break
-                    }
-                }
-                
-                if let result = result {
-                    results[result.id] = result.finish
+                } else {
+                    return "No solution exists."
                 }
             }
+            
+            results[color.id] = color.finish
         }
         
         return output(results: results)
@@ -54,37 +35,39 @@ struct Solver {
     // Obs. This method should be used only for single option users
     
     private func candidateForCustomer(_ customer: Customer, results: [Int: Color.Finish]) -> Color? {
-        guard let color = customer.colors.first else {
-            return nil
-        }
-        
-        if let finish = results[color.id], finish != color.finish {
-            return nil
-        } else {
-            return color
-        }
-    }
-    
-    // Returns the user's colors options that are not in the results yet
-    // If the user is already satisfied, it returns `nil`
-    
-    private func candidatesForCustomer(_ customer: Customer, results: [Int: Color.Finish]) -> [Color]? {
-        var colors: [Color] = []
-        for color in customer.colors {
-            if let finish = results[color.id] {
-                if finish == color.finish {
-                    return []
-                }
-            } else {
-                colors.append(color)
+        if customer.colors.count == 1 {
+            guard let color = customer.colors.first else {
+                return nil
             }
+            
+            if let finish = results[color.id], finish != color.finish {
+                return nil
+            } else {
+                return color
+            }
+        } else {
+            var colors: [Color] = []
+            for color in customer.colors {
+                if let finish = results[color.id] {
+                    if finish == color.finish {
+                        return nil
+                    }
+                } else {
+                    colors.append(color)
+                }
+            }
+            
+            // Try to find a gloss option, otherwise use matte
+            var result = colors.first
+            for color in colors {
+                if color.finish == .Gloss {
+                    result = color
+                    break
+                }
+            }
+            
+            return result
         }
-        
-        guard colors.count > 0 else {
-            return nil
-        }
-        
-        return colors
     }
     
     private func output(results: [Int: Color.Finish]) -> String {

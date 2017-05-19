@@ -16,7 +16,7 @@ struct Paintshop {
 extension Paintshop {
     init?(string: String) {
         var customers = [Customer]()
-        var lines = string.components(separatedBy: "\n")
+        var lines = string.components(separatedBy: "\n").filter { !$0.isEmpty }
         
         guard let numberOfColors = Int(lines.remove(at: 0)) else {
             return nil

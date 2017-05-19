@@ -9,27 +9,43 @@
 import XCTest
 
 class SolverTests: XCTestCase {
-
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    func testFixture1() {
+        verifyFixtureNamed("fixture1", expectedResult: "G G G G M")
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testFixture2() {
+        verifyFixtureNamed("fixture2", expectedResult: "No solution exists.")
+    }
+    
+    func testFixture3() {
+        verifyFixtureNamed("fixture3", expectedResult: "G M G M G")
+    }
+    
+    func testFixture4() {
+        verifyFixtureNamed("fixture4", expectedResult: "M M")
+    }
+    
+    func testFixture5() {
+        verifyFixtureNamed("fixture5", expectedResult: "No solution exists.")
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func verifyFixtureNamed(_ name: String, expectedResult: String) {
+        let mock = MockProvider()
+        guard let fixture = mock.getMock(withName: name, type: "txt") else {
+            XCTFail()
+            return
         }
+        
+        guard let paintShop = Paintshop(string: fixture) else {
+            XCTFail()
+            return
+        }
+        
+        let solver = Solver(paintshop: paintShop)
+        
+        let result = solver.solve()
+        
+        XCTAssertEqual(result, expectedResult)
     }
-
 }

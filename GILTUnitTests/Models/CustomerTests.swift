@@ -10,6 +10,7 @@ import XCTest
 import Foundation
 
 class CustomerTests: XCTestCase {
+    
 
     func testCreateCustomers() {
         let colorOne = Color(id: 1, finish: .Matte)
@@ -22,16 +23,6 @@ class CustomerTests: XCTestCase {
         XCTAssertNotNil(customer.colors[0])
         XCTAssertNotNil(customer.colors[1])
         XCTAssertNotNil(customer.colors[2])
-        
-        XCTAssertEqual(customer.colors.count, Int(3))
-        XCTAssertEqual(customer.colors[0] , colorOne)
-        XCTAssertEqual(customer.colors[1] , colorTwo)
-        XCTAssertEqual(customer.colors[2] , colorThree)
-        
-        XCTAssertNotEqual(customer.colors.count, Int(0))
-        XCTAssertNotEqual(customer.colors[0] , colorThree)
-        XCTAssertNotEqual(customer.colors[1] , colorOne)
-        XCTAssertNotEqual(customer.colors[2] , colorTwo)
         
         XCTAssertEqual(customer.colors[0].id, Int(1))
         XCTAssertEqual(customer.colors[1].id, Int(1))

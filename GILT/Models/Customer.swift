@@ -18,11 +18,11 @@ extension Customer {
         let items = string.components(separatedBy: " ")
         
         for index in stride(from: 0, to: items.count, by: 2) {
-            guard let id = Int(items[index]) else {
+            guard index < items.count, let id = Int(items[index]) else {
                 return nil
             }
             
-            guard let finish = Color.Finish(rawValue: items[index + 1]) else {
+            guard (index + 1) < items.count, let finish = Color.Finish(rawValue: items[index + 1]) else {
                 return nil
             }
             
@@ -31,5 +31,15 @@ extension Customer {
         }
         
         self.colors = colors
+    }
+    
+    func satisfiedBy(_ solution: [Int: Color.Finish]) -> Bool {
+        for color in colors {
+            if solution[color.id] == color.finish {
+                return true
+            }
+        }
+        
+        return false
     }
 }
