@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>GILTUnitTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>877AAC911ECDD6360099D0A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8786E6431ECC8A57007CBDBE</key>
 		<dict>
 			<key>primary</key>

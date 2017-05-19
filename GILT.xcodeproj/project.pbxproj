@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87008D261ECDE15A008EC635 /* CustomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87008D251ECDE15A008EC635 /* CustomerTests.swift */; };
+		87008D281ECDE943008EC635 /* PaintshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87008D271ECDE943008EC635 /* PaintshopTests.swift */; };
+		87185D8D1ECDF14900F9CCA8 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87185D8C1ECDF14900F9CCA8 /* OptionsTests.swift */; };
+		87185D8F1ECDF17100F9CCA8 /* InputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87185D8E1ECDF17100F9CCA8 /* InputTests.swift */; };
+		87185D911ECDF18700F9CCA8 /* SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87185D901ECDF18700F9CCA8 /* SolverTests.swift */; };
+		87185D981ECE0EDD00F9CCA8 /* fixture1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D931ECE0EDD00F9CCA8 /* fixture1.txt */; };
+		87185D991ECE0EDD00F9CCA8 /* fixture2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D941ECE0EDD00F9CCA8 /* fixture2.txt */; };
+		87185D9A1ECE0EDD00F9CCA8 /* fixture3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D951ECE0EDD00F9CCA8 /* fixture3.txt */; };
+		87185D9B1ECE0EDD00F9CCA8 /* fixture4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D961ECE0EDD00F9CCA8 /* fixture4.txt */; };
+		87185D9C1ECE0EDD00F9CCA8 /* fixture5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D971ECE0EDD00F9CCA8 /* fixture5.txt */; };
+		87185D9E1ECE0F3000F9CCA8 /* invalid.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D9D1ECE0F3000F9CCA8 /* invalid.txt */; };
+		876451A91ECE1C7F0042E347 /* MockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876451A81ECE1C7F0042E347 /* MockProvider.swift */; };
+		876451AB1ECE36370042E347 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6561ECCD94E007CBDBE /* Options.swift */; };
+		876451AC1ECE363A0042E347 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6581ECCD966007CBDBE /* Input.swift */; };
+		876451AD1ECE363C0042E347 /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E65A1ECCF239007CBDBE /* Solver.swift */; };
+		876451AE1ECE36400042E347 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E64F1ECCD782007CBDBE /* Color.swift */; };
+		876451AF1ECE36430042E347 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6511ECCD798007CBDBE /* Customer.swift */; };
+		876451B01ECE36450042E347 /* Paintshop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6531ECCD7BE007CBDBE /* Paintshop.swift */; };
+		876451B11ECE36480042E347 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6471ECC8A57007CBDBE /* main.swift */; };
+		877AAC951ECDD6360099D0A7 /* ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877AAC941ECDD6360099D0A7 /* ColorTests.swift */; };
 		8786E6481ECC8A57007CBDBE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6471ECC8A57007CBDBE /* main.swift */; };
 		8786E6501ECCD782007CBDBE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E64F1ECCD782007CBDBE /* Color.swift */; };
 		8786E6521ECCD798007CBDBE /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6511ECCD798007CBDBE /* Customer.swift */; };
@@ -29,6 +49,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		87008D251ECDE15A008EC635 /* CustomerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerTests.swift; path = Models/CustomerTests.swift; sourceTree = "<group>"; };
+		87008D271ECDE943008EC635 /* PaintshopTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaintshopTests.swift; path = Models/PaintshopTests.swift; sourceTree = "<group>"; };
+		87185D8C1ECDF14900F9CCA8 /* OptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionsTests.swift; path = Controllers/OptionsTests.swift; sourceTree = "<group>"; };
+		87185D8E1ECDF17100F9CCA8 /* InputTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputTests.swift; path = Controllers/InputTests.swift; sourceTree = "<group>"; };
+		87185D901ECDF18700F9CCA8 /* SolverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SolverTests.swift; path = Controllers/SolverTests.swift; sourceTree = "<group>"; };
+		87185D931ECE0EDD00F9CCA8 /* fixture1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fixture1.txt; path = fixtures/fixture1.txt; sourceTree = "<group>"; };
+		87185D941ECE0EDD00F9CCA8 /* fixture2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fixture2.txt; path = fixtures/fixture2.txt; sourceTree = "<group>"; };
+		87185D951ECE0EDD00F9CCA8 /* fixture3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fixture3.txt; path = fixtures/fixture3.txt; sourceTree = "<group>"; };
+		87185D961ECE0EDD00F9CCA8 /* fixture4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fixture4.txt; path = fixtures/fixture4.txt; sourceTree = "<group>"; };
+		87185D971ECE0EDD00F9CCA8 /* fixture5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fixture5.txt; path = fixtures/fixture5.txt; sourceTree = "<group>"; };
+		87185D9D1ECE0F3000F9CCA8 /* invalid.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = invalid.txt; path = fixtures/invalid.txt; sourceTree = "<group>"; };
+		876451A81ECE1C7F0042E347 /* MockProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockProvider.swift; path = MockProvider/MockProvider.swift; sourceTree = "<group>"; };
+		877AAC921ECDD6360099D0A7 /* GILTUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GILTUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		877AAC941ECDD6360099D0A7 /* ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorTests.swift; path = Models/ColorTests.swift; sourceTree = "<group>"; };
+		877AAC961ECDD6360099D0A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8786E6441ECC8A57007CBDBE /* GILT */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GILT; sourceTree = BUILT_PRODUCTS_DIR; };
 		8786E6471ECC8A57007CBDBE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8786E64F1ECCD782007CBDBE /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = Models/Color.swift; sourceTree = "<group>"; };
@@ -40,6 +75,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		877AAC8F1ECDD6360099D0A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8786E6411ECC8A57007CBDBE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,10 +92,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87185D8B1ECDF11800F9CCA8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				87185D8C1ECDF14900F9CCA8 /* OptionsTests.swift */,
+				87185D8E1ECDF17100F9CCA8 /* InputTests.swift */,
+				87185D901ECDF18700F9CCA8 /* SolverTests.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		87185D921ECE0EAD00F9CCA8 /* fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				87185D9D1ECE0F3000F9CCA8 /* invalid.txt */,
+				87185D931ECE0EDD00F9CCA8 /* fixture1.txt */,
+				87185D941ECE0EDD00F9CCA8 /* fixture2.txt */,
+				87185D951ECE0EDD00F9CCA8 /* fixture3.txt */,
+				87185D961ECE0EDD00F9CCA8 /* fixture4.txt */,
+				87185D971ECE0EDD00F9CCA8 /* fixture5.txt */,
+			);
+			name = fixtures;
+			sourceTree = "<group>";
+		};
+		876451AA1ECE1C850042E347 /* MockProvider */ = {
+			isa = PBXGroup;
+			children = (
+				876451A81ECE1C7F0042E347 /* MockProvider.swift */,
+			);
+			name = MockProvider;
+			sourceTree = "<group>";
+		};
+		877AAC931ECDD6360099D0A7 /* GILTUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				87185D921ECE0EAD00F9CCA8 /* fixtures */,
+				87185D8B1ECDF11800F9CCA8 /* Controllers */,
+				876451AA1ECE1C850042E347 /* MockProvider */,
+				877AACA11ECDDA2C0099D0A7 /* Models */,
+				877AAC961ECDD6360099D0A7 /* Info.plist */,
+			);
+			path = GILTUnitTests;
+			sourceTree = "<group>";
+		};
+		877AACA11ECDDA2C0099D0A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				877AAC941ECDD6360099D0A7 /* ColorTests.swift */,
+				87008D251ECDE15A008EC635 /* CustomerTests.swift */,
+				87008D271ECDE943008EC635 /* PaintshopTests.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		8786E63B1ECC8A57007CBDBE = {
 			isa = PBXGroup;
 			children = (
 				8786E6461ECC8A57007CBDBE /* GILT */,
+				877AAC931ECDD6360099D0A7 /* GILTUnitTests */,
 				8786E6451ECC8A57007CBDBE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				8786E6441ECC8A57007CBDBE /* GILT */,
+				877AAC921ECDD6360099D0A7 /* GILTUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +196,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		877AAC911ECDD6360099D0A7 /* GILTUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 877AAC991ECDD6360099D0A7 /* Build configuration list for PBXNativeTarget "GILTUnitTests" */;
+			buildPhases = (
+				877AAC8E1ECDD6360099D0A7 /* Sources */,
+				877AAC8F1ECDD6360099D0A7 /* Frameworks */,
+				877AAC901ECDD6360099D0A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GILTUnitTests;
+			productName = GILTUnitTests;
+			productReference = 877AAC921ECDD6360099D0A7 /* GILTUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8786E6431ECC8A57007CBDBE /* GILT */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8786E64B1ECC8A57007CBDBE /* Build configuration list for PBXNativeTarget "GILT" */;
@@ -126,6 +240,11 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Alessandro dos Santos Pinto";
 				TargetAttributes = {
+					877AAC911ECDD6360099D0A7 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = LZASXEKJ7F;
+						ProvisioningStyle = Automatic;
+					};
 					8786E6431ECC8A57007CBDBE = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = LZASXEKJ7F;
@@ -146,11 +265,49 @@
 			projectRoot = "";
 			targets = (
 				8786E6431ECC8A57007CBDBE /* GILT */,
+				877AAC911ECDD6360099D0A7 /* GILTUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		877AAC901ECDD6360099D0A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87185D9A1ECE0EDD00F9CCA8 /* fixture3.txt in Resources */,
+				87185D9B1ECE0EDD00F9CCA8 /* fixture4.txt in Resources */,
+				87185D9E1ECE0F3000F9CCA8 /* invalid.txt in Resources */,
+				87185D981ECE0EDD00F9CCA8 /* fixture1.txt in Resources */,
+				87185D991ECE0EDD00F9CCA8 /* fixture2.txt in Resources */,
+				87185D9C1ECE0EDD00F9CCA8 /* fixture5.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		877AAC8E1ECDD6360099D0A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				876451AD1ECE363C0042E347 /* Solver.swift in Sources */,
+				87185D911ECDF18700F9CCA8 /* SolverTests.swift in Sources */,
+				876451AE1ECE36400042E347 /* Color.swift in Sources */,
+				876451AF1ECE36430042E347 /* Customer.swift in Sources */,
+				87008D261ECDE15A008EC635 /* CustomerTests.swift in Sources */,
+				87185D8F1ECDF17100F9CCA8 /* InputTests.swift in Sources */,
+				87008D281ECDE943008EC635 /* PaintshopTests.swift in Sources */,
+				876451AB1ECE36370042E347 /* Options.swift in Sources */,
+				876451B11ECE36480042E347 /* main.swift in Sources */,
+				87185D8D1ECDF14900F9CCA8 /* OptionsTests.swift in Sources */,
+				876451AC1ECE363A0042E347 /* Input.swift in Sources */,
+				876451B01ECE36450042E347 /* Paintshop.swift in Sources */,
+				877AAC951ECDD6360099D0A7 /* ColorTests.swift in Sources */,
+				876451A91ECE1C7F0042E347 /* MockProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8786E6401ECC8A57007CBDBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,6 +325,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		877AAC971ECDD6360099D0A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LZASXEKJ7F;
+				INFOPLIST_FILE = GILTUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.GILTUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		877AAC981ECDD6360099D0A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LZASXEKJ7F;
+				INFOPLIST_FILE = GILTUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delarge.GILTUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		8786E6491ECC8A57007CBDBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -279,6 +464,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		877AAC991ECDD6360099D0A7 /* Build configuration list for PBXNativeTarget "GILTUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877AAC971ECDD6360099D0A7 /* Debug */,
+				877AAC981ECDD6360099D0A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8786E63F1ECC8A57007CBDBE /* Build configuration list for PBXProject "GILT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -295,6 +489,7 @@
 				8786E64D1ECC8A57007CBDBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
