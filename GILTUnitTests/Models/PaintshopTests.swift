@@ -196,4 +196,34 @@ class PaintshopTests: XCTestCase {
         let paintShop = try? Paintshop(string: paint)
         XCTAssertNil(paintShop)
     }
+    
+    func testNumberOfColoursNotProvided() {
+        let file = "1 M 3 G\n2 G"
+        
+        var paintshop: Paintshop?
+        XCTAssertThrowsError(paintshop = try Paintshop(string: file)) { error in
+            XCTAssertEqual(error as? PaintshopError, .NumberOfColorsNotProvided)
+            XCTAssertNil(paintshop)
+        }
+    }
+    
+    func testInvalidFileFormat() {
+        let file = "\n"
+        
+        var paintshop: Paintshop?
+        XCTAssertThrowsError(paintshop = try Paintshop(string: file)) { error in
+            XCTAssertEqual(error as? PaintshopError, .InvalidFileFormat)
+            XCTAssertNil(paintshop)
+        }
+    }
+    
+    func testInvalidNumberOfColours() {
+        let file = "1\n1 M 3 G\n2 G"
+        
+        var paintshop: Paintshop?
+        XCTAssertThrowsError(paintshop = try Paintshop(string: file)) { error in
+            XCTAssertEqual(error as? PaintshopError, .InvalidNumberOfColors)
+            XCTAssertNil(paintshop)
+        }
+    }
 }
