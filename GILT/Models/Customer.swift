@@ -33,7 +33,7 @@ extension Customer {
         self.options = options
     }
     
-    func satisfied(with solution: [Int: Finish]) -> Bool {
+    func satisfied(with solution: [Color: Finish]) -> Bool {
         for paint in options {
             if solution[paint.color] == paint.finish {
                 return true

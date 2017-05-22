@@ -12,7 +12,7 @@ struct Solver {
     let paintshop: Paintshop
     
     func solve() -> String {
-        var solution: [Int: Finish] = [:]
+        var solution: [Color: Finish] = [:]
         let sortedCustomers = paintshop.customers.sorted { $0.options.count < $1.options.count }
         
         for customer in sortedCustomers {
@@ -30,7 +30,7 @@ struct Solver {
         return complete(solution)
     }
     
-    private func candidateFor(_ customer: Customer, solution: [Int: Finish]) -> Paint? {
+    private func candidateFor(_ customer: Customer, solution: [Color: Finish]) -> Paint? {
         if customer.options.count == 1 {
             guard let paint = customer.options.first else {
                 return nil
@@ -51,7 +51,7 @@ struct Solver {
         }
     }
     
-    private func complete(_ solution: [Int: Finish]) -> String {
+    private func complete(_ solution: [Color: Finish]) -> String {
         let output = (1...paintshop.numberOfColors).map { solution[$0] ?? .Gloss }
         return output.map { $0.rawValue }.joined(separator: " ")
     }

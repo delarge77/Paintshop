@@ -8,7 +8,9 @@
 
 import Foundation
 
+typealias Color = Int
+
 struct Paint {
-    let color: Int
+    let color: Color
     let finish: Finish
 }
