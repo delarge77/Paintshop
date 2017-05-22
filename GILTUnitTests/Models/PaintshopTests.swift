@@ -22,7 +22,7 @@ class PaintshopTests: XCTestCase {
             XCTAssertThrowsError("Could not locate file")
             return
         }
-        guard let paintShop = Paintshop(string: paint) else {
+        guard let paintShop = try? Paintshop(string: paint) else {
             XCTFail()
             return
         }
@@ -50,7 +50,7 @@ class PaintshopTests: XCTestCase {
             XCTAssertThrowsError("Could not locate file")
             return
         }
-        guard let paintShop = Paintshop(string: paint) else {
+        guard let paintShop = try? Paintshop(string: paint) else {
             XCTFail()
             return
         }
@@ -73,7 +73,7 @@ class PaintshopTests: XCTestCase {
             XCTAssertThrowsError("Could not locate file")
             return
         }
-        guard let paintShop = Paintshop(string: paint) else {
+        guard let paintShop = try? Paintshop(string: paint) else {
             XCTFail()
             return
         }
@@ -142,7 +142,7 @@ class PaintshopTests: XCTestCase {
             XCTAssertThrowsError("Could not locate file")
             return
         }
-        guard let paintShop = Paintshop(string: paint) else {
+        guard let paintShop = try? Paintshop(string: paint) else {
             XCTFail()
             return
         }
@@ -165,7 +165,7 @@ class PaintshopTests: XCTestCase {
             XCTAssertThrowsError("Could not locate file")
             return
         }
-        guard let paintShop = Paintshop(string: paint) else {
+        guard let paintShop = try? Paintshop(string: paint) else {
             XCTFail()
             return
         }
@@ -193,7 +193,7 @@ class PaintshopTests: XCTestCase {
             return
         }
         
-        let paintShop = Paintshop(string: paint)
+        let paintShop = try? Paintshop(string: paint)
         XCTAssertNil(paintShop)
     }
 }

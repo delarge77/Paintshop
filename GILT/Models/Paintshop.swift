@@ -14,28 +14,48 @@ struct Paintshop {
 }
 
 extension Paintshop {
-    init?(string: String) {
+    init(string: String) throws {
         var customers = [Customer]()
         var lines = string.components(separatedBy: "\n").filter { !$0.isEmpty }
         
+        guard lines.count > 1 else {
+            throw PaintshopError.InvalidFileFormat
+        }
+        
         guard let numberOfColors = Int(lines.remove(at: 0)) else {
-            return nil
+            throw PaintshopError.NumberOfColorsNotProvided
         }
         
         for line in lines {
-            guard let customer = Customer(string: line) else {
-                return nil
+            do {
+                let customer = try Customer(string: line)
+                customers.append(customer)
+            } catch let e {
+                throw e
             }
-            
-            customers.append(customer)
         }
 
-        // TODO: Tratar caso onde o numero de cores é inválido
-//        guard numberOfColors == 2 else {
-//            return nil
-//        }
+        let n = customers.reduce(0) { (result1, customer) in
+            return customer.colors.reduce(result1) { (_, color) in
+                if color.id > result1 {
+                    return color.id
+                } else {
+                    return result1
+                }
+            }
+        }
+        
+        guard n == numberOfColors else {
+            throw PaintshopError.InvalidNumberOfColors
+        }
         
         self.numberOfColors = numberOfColors
         self.customers = customers
     }
+}
+
+enum PaintshopError: Error {
+    case NumberOfColorsNotProvided
+    case InvalidNumberOfColors
+    case InvalidFileFormat
 }

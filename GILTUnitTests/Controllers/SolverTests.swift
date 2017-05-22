@@ -37,7 +37,7 @@ class SolverTests: XCTestCase {
             return
         }
         
-        guard let paintShop = Paintshop(string: fixture) else {
+        guard let paintShop = try? Paintshop(string: fixture) else {
             XCTFail()
             return
         }

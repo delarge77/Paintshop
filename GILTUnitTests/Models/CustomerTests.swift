@@ -35,7 +35,7 @@ class CustomerTests: XCTestCase {
     }
     
     func testSatisfiedCustomer() {
-        guard let customer = Customer(string: "1 G 2 M 3 G") else {
+        guard let customer = try? Customer(string: "1 G 2 M 3 G") else {
             XCTFail()
             return
         }
@@ -44,7 +44,7 @@ class CustomerTests: XCTestCase {
     }
     
     func testUnsatisfiedCustomer() {
-        guard let customer = Customer(string: "1 G 2 M 3 G") else {
+        guard let customer = try? Customer(string: "1 G 2 M 3 G") else {
             XCTFail()
             return
         }
