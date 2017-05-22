@@ -9,17 +9,20 @@
 import Foundation
 
 struct InputFileReader {
-    func readFileAt(_ path: String) -> String? {
+    func readFileAt(_ path: String) throws -> String {
         let manager = FileManager.default
         if manager.fileExists(atPath: path) {
             guard let content = try? String(contentsOfFile: path) else {
-                print("Error reading file contents.")
-                return nil
+                throw InputFileReaderError.InputFileWithError
             }
             return content
         } else {
-            print("Specified file doesn't exist.")
-            return nil
+            throw InputFileReaderError.InputFileNotFound
         }
     }
+}
+
+enum InputFileReaderError: Error {
+    case InputFileNotFound
+    case InvalidFileFormat
 }
