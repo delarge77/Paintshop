@@ -11,13 +11,17 @@ import XCTest
 class CommandLineOptionsParserTests: XCTestCase {
     func testValidInputFilePath() {
         let parser = CommandLineOptionsParser(arguments: ["dir", "~/test.txt"])
-        let path = parser.inputFilePath()
+        let path = try? parser.inputFilePath()
         XCTAssertEqual(path, "~/test.txt")
     }
     
     func testInvalidInputFilePath() {
         let parser = CommandLineOptionsParser(arguments: ["dir"])
-        let path = parser.inputFilePath()
-        XCTAssertNil(path)
+        
+        var path: String?
+        XCTAssertThrowsError(path = try parser.inputFilePath()) { error in
+            XCTAssertEqual(error as? CommandLineOptionsParserError, .NoInputFileProvided)
+            XCTAssertNil(path)
+        }
     }
 }

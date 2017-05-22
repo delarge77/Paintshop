@@ -9,7 +9,10 @@
 import Foundation
 
 let options = CommandLineOptionsParser()
-if let path = options.inputFilePath() {
+
+do {
+    
+    let path = try options.inputFilePath()
     let reader = InputFileReader()
     if let content = reader.readFileAt(path) {
         if let shop = Paintshop(string: content) {
@@ -20,4 +23,6 @@ if let path = options.inputFilePath() {
             print("Error parsing input file.")
         }
     }
+} catch CommandLineOptionsParserError.NoInputFileProvided {
+    print("No input file provided")
 }

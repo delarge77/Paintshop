@@ -15,11 +15,15 @@ struct CommandLineOptionsParser {
         self.arguments = arguments
     }
     
-    func inputFilePath() -> String? {
+    func inputFilePath() throws -> String {
         guard arguments.count > 1 else {
-            return nil
+            throw CommandLineOptionsParserError.NoInputFileProvided
         }
         
         return arguments[1]
     }
+}
+
+enum CommandLineOptionsParserError: Error {
+    case NoInputFileProvided
 }
