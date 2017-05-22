@@ -1,5 +1,5 @@
 //
-//  InputTests.swift
+//  InputFileReaderTests.swift
 //  GILT
 //
 //  Created by Alessandro dos Santos Pinto on 18/05/2017.
