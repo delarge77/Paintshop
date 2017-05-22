@@ -40,7 +40,7 @@ class CustomerTests: XCTestCase {
             return
         }
         
-        XCTAssertTrue(customer.satisfiedWith([1: .Gloss, 2: .Gloss, 3: .Gloss]))
+        XCTAssertTrue(customer.satisfied(with: [1: .Gloss, 2: .Gloss, 3: .Gloss]))
     }
     
     func testUnsatisfiedCustomer() {
@@ -49,7 +49,29 @@ class CustomerTests: XCTestCase {
             return
         }
         
-        XCTAssertFalse(customer.satisfiedWith([1: .Matte, 2: .Gloss, 3: .Matte]))
+        XCTAssertFalse(customer.satisfied(with: [1: .Matte, 2: .Gloss, 3: .Matte]))
+    }
+    
+    func testCustomerWithColorNotSpecified() {
+        let file = "M"
+        
+        var customer: Customer?
+        
+        XCTAssertThrowsError(customer = try Customer(string: file)) { error in
+            XCTAssertNil(customer)
+            XCTAssertEqual(error as? CustomerError, .ColorNotSpecified)
+        }
+    }
+    
+    func testCustomerWithFinishNotSpecified() {
+        let file = "1"
+        
+        var customer: Customer?
+        
+        XCTAssertThrowsError(customer = try Customer(string: file)) { error in
+            XCTAssertNil(customer)
+            XCTAssertEqual(error as? CustomerError, .FinishNotSpecified)
+        }
     }
     
 }

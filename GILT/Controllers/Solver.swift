@@ -17,7 +17,7 @@ struct Solver {
         
         for customer in sortedCustomers {
             guard let color = candidateFor(customer, solution: solution) else {
-                if customer.satisfiedWith(solution) {
+                if customer.satisfied(with: solution) {
                     continue
                 } else {
                     return "No solution exists."
