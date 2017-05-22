@@ -18,6 +18,8 @@
 		87185D9B1ECE0EDD00F9CCA8 /* fixture4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D961ECE0EDD00F9CCA8 /* fixture4.txt */; };
 		87185D9C1ECE0EDD00F9CCA8 /* fixture5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D971ECE0EDD00F9CCA8 /* fixture5.txt */; };
 		87185D9E1ECE0F3000F9CCA8 /* invalid.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D9D1ECE0F3000F9CCA8 /* invalid.txt */; };
+		871B1F611ED337B300407894 /* gilt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 871B1F601ED337B300407894 /* gilt.jpg */; };
+		871B1F631ED3391B00407894 /* reader-input.txt in Resources */ = {isa = PBXBuildFile; fileRef = 871B1F621ED3391B00407894 /* reader-input.txt */; };
 		876451A91ECE1C7F0042E347 /* MockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876451A81ECE1C7F0042E347 /* MockProvider.swift */; };
 		876451AB1ECE36370042E347 /* CommandLineOptionsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6561ECCD94E007CBDBE /* CommandLineOptionsParser.swift */; };
 		876451AC1ECE363A0042E347 /* InputFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6581ECCD966007CBDBE /* InputFileReader.swift */; };
@@ -60,6 +62,8 @@
 		87185D961ECE0EDD00F9CCA8 /* fixture4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fixture4.txt; path = fixtures/fixture4.txt; sourceTree = "<group>"; };
 		87185D971ECE0EDD00F9CCA8 /* fixture5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fixture5.txt; path = fixtures/fixture5.txt; sourceTree = "<group>"; };
 		87185D9D1ECE0F3000F9CCA8 /* invalid.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = invalid.txt; path = fixtures/invalid.txt; sourceTree = "<group>"; };
+		871B1F601ED337B300407894 /* gilt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gilt.jpg; sourceTree = "<group>"; };
+		871B1F621ED3391B00407894 /* reader-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "reader-input.txt"; path = "fixtures/reader-input.txt"; sourceTree = "<group>"; };
 		876451A81ECE1C7F0042E347 /* MockProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockProvider.swift; path = MockProvider/MockProvider.swift; sourceTree = "<group>"; };
 		877AAC921ECDD6360099D0A7 /* GILTUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GILTUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		877AAC941ECDD6360099D0A7 /* ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorTests.swift; path = Models/ColorTests.swift; sourceTree = "<group>"; };
@@ -105,12 +109,14 @@
 		87185D921ECE0EAD00F9CCA8 /* fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				871B1F601ED337B300407894 /* gilt.jpg */,
 				87185D9D1ECE0F3000F9CCA8 /* invalid.txt */,
 				87185D931ECE0EDD00F9CCA8 /* fixture1.txt */,
 				87185D941ECE0EDD00F9CCA8 /* fixture2.txt */,
 				87185D951ECE0EDD00F9CCA8 /* fixture3.txt */,
 				87185D961ECE0EDD00F9CCA8 /* fixture4.txt */,
 				87185D971ECE0EDD00F9CCA8 /* fixture5.txt */,
+				871B1F621ED3391B00407894 /* reader-input.txt */,
 			);
 			name = fixtures;
 			sourceTree = "<group>";
@@ -281,6 +287,8 @@
 				87185D981ECE0EDD00F9CCA8 /* fixture1.txt in Resources */,
 				87185D991ECE0EDD00F9CCA8 /* fixture2.txt in Resources */,
 				87185D9C1ECE0EDD00F9CCA8 /* fixture5.txt in Resources */,
+				871B1F611ED337B300407894 /* gilt.jpg in Resources */,
+				871B1F631ED3391B00407894 /* reader-input.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

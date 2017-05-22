@@ -34,28 +34,6 @@ class CustomerTests: XCTestCase {
         
     }
     
-    func testCreateCustomerWithFixture1() {
-        let mock = MockProvider()
-        let file = mock.getMock(withName: "fixture1", type: "txt")
-        guard let fileString = file else {
-            XCTAssertThrowsError("Could not locate file")
-            return
-        }
-        
-        guard let paintShop = Paintshop(string: fileString) else {
-            XCTFail()
-            return
-        }
-        
-        let customers = paintShop.customers
-        
-        XCTAssertNotNil(customers)
-        XCTAssertEqual(customers.count, 3)
-        XCTAssertEqual(customers[0].colors.count, 3)
-        XCTAssertEqual(customers[1].colors.count, 3)
-        XCTAssertEqual(customers[2].colors.count, 1)
-    }
-    
     func testSatisfiedCustomer() {
         guard let customer = Customer(string: "1 G 2 M 3 G") else {
             XCTFail()

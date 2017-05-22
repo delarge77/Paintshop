@@ -11,38 +11,38 @@ import XCTest
 class InputFileReaderTests: XCTestCase {
 
     func testInputFile() {
-        let file = Bundle(for: type(of: self)).path(forResource: "fixture1", ofType: "txt")
+        let reader = InputFileReader()
+        guard let path = Bundle(for: type(of: self)).path(forResource: "reader-input", ofType: "txt") else {
+            XCTFail()
+            return
+        }
+        let output = try? reader.readFileAt(path)
+        XCTAssertEqual(output, "GILT\n")
+    }
+    
+    func testInvalidFileFormat() {
         
-        guard let filePath = file else {
+        guard let path = Bundle(for: type(of: self)).path(forResource: "gilt", ofType: "jpg") else {
+            XCTFail()
             return
         }
         
         let reader = InputFileReader()
-        guard let output = reader.readFileAt(filePath) else {
-            return
+        
+        var content: String?
+        XCTAssertThrowsError(content = try reader.readFileAt(path)) { error in
+            XCTAssertEqual(error as? InputFileReaderError, .InvalidFileFormat)
+            XCTAssertNil(content)
         }
-        print(output)
-        
-        ///////////
-        
-        let fileError = Bundle(for: type(of: self)).path(forResource: "invalid", ofType: "txt")
-        
-        guard let filePathError = fileError else {
-            return
-        }
-        
-        guard let error = reader.readFileAt(filePathError) else {
-            return
-        }
-        
-        print(error)
-        
-        ///////////
-        
-        guard let output1 = reader.readFileAt("") else {
-            return
-        }
-        print(output1)
     }
-
+    
+    func testInputFileNotFound () {
+        let reader = InputFileReader()
+        
+        var content: String?
+        XCTAssertThrowsError(content = try reader.readFileAt("filenotexist.txt")) { error in
+            XCTAssertEqual(error as? InputFileReaderError, .InputFileNotFound)
+            XCTAssertNil(content)
+        }
+    }
 }
