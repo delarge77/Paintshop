@@ -11,6 +11,18 @@ import Foundation
 struct Paintshop {
     let numberOfColors: Int
     let customers: [Customer]
+
+    var actualNumberOfColors: Int {
+        return customers.reduce(0) { (result, customer) in
+            return customer.colors.reduce(result) { (_, color) in
+                if color.id > result {
+                    return color.id
+                } else {
+                    return result
+                }
+            }
+        }
+    }
 }
 
 extension Paintshop {
@@ -34,23 +46,13 @@ extension Paintshop {
                 throw e
             }
         }
-
-        let n = customers.reduce(0) { (result1, customer) in
-            return customer.colors.reduce(result1) { (_, color) in
-                if color.id > result1 {
-                    return color.id
-                } else {
-                    return result1
-                }
-            }
-        }
-        
-        guard n == numberOfColors else {
-            throw PaintshopError.InvalidNumberOfColors
-        }
         
         self.numberOfColors = numberOfColors
         self.customers = customers
+        
+        guard actualNumberOfColors == numberOfColors else {
+            throw PaintshopError.InvalidNumberOfColors
+        }
     }
 }
 
