@@ -11,21 +11,21 @@ import XCTest
 class ColorTests: XCTestCase {
     
     func testColors() {
-        let colorGloss = Color(id: 1, finish: .Gloss)
-        let colorMatte = Color(id: 1, finish: .Matte)
+        let colorGloss = Paint(color: 1, finish: .Gloss)
+        let colorMatte = Paint(color: 1, finish: .Matte)
         
         
         XCTAssertNotNil(colorGloss)
         XCTAssertNotNil(colorMatte)
         
-        XCTAssertEqual(colorGloss.id, 1)
-        XCTAssertEqual(colorMatte.id, 1)
+        XCTAssertEqual(colorGloss.color, 1)
+        XCTAssertEqual(colorMatte.color, 1)
         
         XCTAssertEqual(colorGloss.finish, .Gloss)
         XCTAssertEqual(colorMatte.finish, .Matte)
         
-        XCTAssertNotEqual(colorGloss.id, 2)
-        XCTAssertNotEqual(colorMatte.id, 2)
+        XCTAssertNotEqual(colorGloss.color, 2)
+        XCTAssertNotEqual(colorMatte.color, 2)
         
         XCTAssertNotEqual(colorGloss.finish, .Matte)
         XCTAssertNotEqual(colorMatte.finish, .Gloss)

@@ -13,24 +13,24 @@ class CustomerTests: XCTestCase {
     
 
     func testCreateCustomers() {
-        let colorOne = Color(id: 1, finish: .Matte)
-        let colorTwo = Color(id: 1, finish: .Gloss)
-        let colorThree = Color(id: 2, finish: .Matte)
+        let colorOne = Paint(color: 1, finish: .Matte)
+        let colorTwo = Paint(color: 1, finish: .Gloss)
+        let colorThree = Paint(color: 2, finish: .Matte)
         
-        let customer = Customer(colors: [colorOne, colorTwo, colorThree])
+        let customer = Customer(options: [colorOne, colorTwo, colorThree])
         
         XCTAssertNotNil(customer)
-        XCTAssertNotNil(customer.colors[0])
-        XCTAssertNotNil(customer.colors[1])
-        XCTAssertNotNil(customer.colors[2])
+        XCTAssertNotNil(customer.options[0])
+        XCTAssertNotNil(customer.options[1])
+        XCTAssertNotNil(customer.options[2])
         
-        XCTAssertEqual(customer.colors[0].id, 1)
-        XCTAssertEqual(customer.colors[1].id, 1)
-        XCTAssertEqual(customer.colors[2].id, 2)
+        XCTAssertEqual(customer.options[0].color, 1)
+        XCTAssertEqual(customer.options[1].color, 1)
+        XCTAssertEqual(customer.options[2].color, 2)
         
-        XCTAssertNotEqual(customer.colors[0].id, 2)
-        XCTAssertNotEqual(customer.colors[1].id, 2)
-        XCTAssertNotEqual(customer.colors[2].id, 1)
+        XCTAssertNotEqual(customer.options[0].color, 2)
+        XCTAssertNotEqual(customer.options[1].color, 2)
+        XCTAssertNotEqual(customer.options[2].color, 1)
         
     }
     
@@ -63,7 +63,7 @@ class CustomerTests: XCTestCase {
         }
     }
     
-    func testCustomerWithFinishNotSpecified() {
+    func testCustomerWithFinishNotSpecified () {
         let file = "1"
         
         var customer: Customer?

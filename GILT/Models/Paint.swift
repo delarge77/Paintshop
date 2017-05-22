@@ -1,5 +1,5 @@
 //
-//  Color.swift
+//  Paint.swift
 //  GILT
 //
 //  Created by Alessandro dos Santos Pinto on 17/05/2017.
@@ -8,12 +8,7 @@
 
 import Foundation
 
-struct Color {
-    let id: Int
+struct Paint {
+    let color: Int
     let finish: Finish
-    
-    enum Finish: String {
-        case Matte = "M"
-        case Gloss = "G"
-    }
 }

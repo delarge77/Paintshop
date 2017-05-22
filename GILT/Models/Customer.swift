@@ -9,33 +9,33 @@
 import Foundation
 
 struct Customer {
-    let colors: [Color]
+    let options: [Paint]
 }
 
 extension Customer {
     init(string: String) throws {
-        var colors = [Color]()
+        var options = [Paint]()
         let items = string.components(separatedBy: " ")
         
         for index in stride(from: 0, to: items.count, by: 2) {
-            guard index < items.count, let id = Int(items[index]) else {
+            guard index < items.count, let color = Int(items[index]) else {
                 throw CustomerError.ColorNotSpecified
             }
             
-            guard (index + 1) < items.count, let finish = Color.Finish(rawValue: items[index + 1]) else {
+            guard (index + 1) < items.count, let finish = Finish(rawValue: items[index + 1]) else {
                 throw CustomerError.FinishNotSpecified
             }
             
-            let color = Color(id: id, finish: finish)
-            colors.append(color)
+            let paint = Paint(color: color, finish: finish)
+            options.append(paint)
         }
         
-        self.colors = colors
+        self.options = options
     }
     
-    func satisfied(with solution: [Int: Color.Finish]) -> Bool {
-        for color in colors {
-            if solution[color.id] == color.finish {
+    func satisfied(with solution: [Int: Finish]) -> Bool {
+        for paint in options {
+            if solution[paint.color] == paint.finish {
                 return true
             }
         }

@@ -28,12 +28,8 @@ extension Paintshop {
         let customers = try lines.map { try Customer(string: $0) }
         
         let actualNumberOfColors = customers.reduce(0) { (result, customer) in
-            return customer.colors.reduce(result) { (_, color) in
-                if color.id > result {
-                    return color.id
-                } else {
-                    return result
-                }
+            return customer.options.reduce(result) { (_, paint) in
+                return max(result, paint.color)
             }
         }
         
