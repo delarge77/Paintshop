@@ -8,7 +8,8 @@
 
 import Foundation
 
-if let path = Options.read() {
+let options = CommandLineOptionsParser()
+if let path = options.inputFilePath() {
     let reader = InputFileReader()
     if let content = reader.readFileAt(path) {
         if let shop = Paintshop(string: content) {

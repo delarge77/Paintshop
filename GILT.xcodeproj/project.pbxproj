@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		87008D261ECDE15A008EC635 /* CustomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87008D251ECDE15A008EC635 /* CustomerTests.swift */; };
 		87008D281ECDE943008EC635 /* PaintshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87008D271ECDE943008EC635 /* PaintshopTests.swift */; };
-		87185D8D1ECDF14900F9CCA8 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87185D8C1ECDF14900F9CCA8 /* OptionsTests.swift */; };
+		87185D8D1ECDF14900F9CCA8 /* CommandLineOptionsParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87185D8C1ECDF14900F9CCA8 /* CommandLineOptionsParserTests.swift */; };
 		87185D8F1ECDF17100F9CCA8 /* InputFileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87185D8E1ECDF17100F9CCA8 /* InputFileReaderTests.swift */; };
 		87185D911ECDF18700F9CCA8 /* SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87185D901ECDF18700F9CCA8 /* SolverTests.swift */; };
 		87185D981ECE0EDD00F9CCA8 /* fixture1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D931ECE0EDD00F9CCA8 /* fixture1.txt */; };
@@ -19,7 +19,7 @@
 		87185D9C1ECE0EDD00F9CCA8 /* fixture5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D971ECE0EDD00F9CCA8 /* fixture5.txt */; };
 		87185D9E1ECE0F3000F9CCA8 /* invalid.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D9D1ECE0F3000F9CCA8 /* invalid.txt */; };
 		876451A91ECE1C7F0042E347 /* MockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876451A81ECE1C7F0042E347 /* MockProvider.swift */; };
-		876451AB1ECE36370042E347 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6561ECCD94E007CBDBE /* Options.swift */; };
+		876451AB1ECE36370042E347 /* CommandLineOptionsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6561ECCD94E007CBDBE /* CommandLineOptionsParser.swift */; };
 		876451AC1ECE363A0042E347 /* InputFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6581ECCD966007CBDBE /* InputFileReader.swift */; };
 		876451AD1ECE363C0042E347 /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E65A1ECCF239007CBDBE /* Solver.swift */; };
 		876451AE1ECE36400042E347 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E64F1ECCD782007CBDBE /* Color.swift */; };
@@ -31,7 +31,7 @@
 		8786E6501ECCD782007CBDBE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E64F1ECCD782007CBDBE /* Color.swift */; };
 		8786E6521ECCD798007CBDBE /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6511ECCD798007CBDBE /* Customer.swift */; };
 		8786E6541ECCD7BE007CBDBE /* Paintshop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6531ECCD7BE007CBDBE /* Paintshop.swift */; };
-		8786E6571ECCD94E007CBDBE /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6561ECCD94E007CBDBE /* Options.swift */; };
+		8786E6571ECCD94E007CBDBE /* CommandLineOptionsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6561ECCD94E007CBDBE /* CommandLineOptionsParser.swift */; };
 		8786E6591ECCD966007CBDBE /* InputFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6581ECCD966007CBDBE /* InputFileReader.swift */; };
 		8786E65B1ECCF239007CBDBE /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E65A1ECCF239007CBDBE /* Solver.swift */; };
 /* End PBXBuildFile section */
@@ -51,7 +51,7 @@
 /* Begin PBXFileReference section */
 		87008D251ECDE15A008EC635 /* CustomerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerTests.swift; path = Models/CustomerTests.swift; sourceTree = "<group>"; };
 		87008D271ECDE943008EC635 /* PaintshopTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaintshopTests.swift; path = Models/PaintshopTests.swift; sourceTree = "<group>"; };
-		87185D8C1ECDF14900F9CCA8 /* OptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionsTests.swift; path = Controllers/OptionsTests.swift; sourceTree = "<group>"; };
+		87185D8C1ECDF14900F9CCA8 /* CommandLineOptionsParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandLineOptionsParserTests.swift; path = Controllers/CommandLineOptionsParserTests.swift; sourceTree = "<group>"; };
 		87185D8E1ECDF17100F9CCA8 /* InputFileReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputFileReaderTests.swift; path = Controllers/InputFileReaderTests.swift; sourceTree = "<group>"; };
 		87185D901ECDF18700F9CCA8 /* SolverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SolverTests.swift; path = Controllers/SolverTests.swift; sourceTree = "<group>"; };
 		87185D931ECE0EDD00F9CCA8 /* fixture1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fixture1.txt; path = fixtures/fixture1.txt; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		8786E64F1ECCD782007CBDBE /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = Models/Color.swift; sourceTree = "<group>"; };
 		8786E6511ECCD798007CBDBE /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Customer.swift; path = Models/Customer.swift; sourceTree = "<group>"; };
 		8786E6531ECCD7BE007CBDBE /* Paintshop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Paintshop.swift; path = Models/Paintshop.swift; sourceTree = "<group>"; };
-		8786E6561ECCD94E007CBDBE /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Options.swift; path = Controllers/Options.swift; sourceTree = "<group>"; };
+		8786E6561ECCD94E007CBDBE /* CommandLineOptionsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandLineOptionsParser.swift; path = Controllers/CommandLineOptionsParser.swift; sourceTree = "<group>"; };
 		8786E6581ECCD966007CBDBE /* InputFileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputFileReader.swift; path = Controllers/InputFileReader.swift; sourceTree = "<group>"; };
 		8786E65A1ECCF239007CBDBE /* Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Solver.swift; path = Controllers/Solver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +95,7 @@
 		87185D8B1ECDF11800F9CCA8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				87185D8C1ECDF14900F9CCA8 /* OptionsTests.swift */,
+				87185D8C1ECDF14900F9CCA8 /* CommandLineOptionsParserTests.swift */,
 				87185D8E1ECDF17100F9CCA8 /* InputFileReaderTests.swift */,
 				87185D901ECDF18700F9CCA8 /* SolverTests.swift */,
 			);
@@ -186,7 +186,7 @@
 		8786E6551ECCD907007CBDBE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8786E6561ECCD94E007CBDBE /* Options.swift */,
+				8786E6561ECCD94E007CBDBE /* CommandLineOptionsParser.swift */,
 				8786E6581ECCD966007CBDBE /* InputFileReader.swift */,
 				8786E65A1ECCF239007CBDBE /* Solver.swift */,
 			);
@@ -298,9 +298,9 @@
 				87008D261ECDE15A008EC635 /* CustomerTests.swift in Sources */,
 				87185D8F1ECDF17100F9CCA8 /* InputFileReaderTests.swift in Sources */,
 				87008D281ECDE943008EC635 /* PaintshopTests.swift in Sources */,
-				876451AB1ECE36370042E347 /* Options.swift in Sources */,
+				876451AB1ECE36370042E347 /* CommandLineOptionsParser.swift in Sources */,
 				876451B11ECE36480042E347 /* main.swift in Sources */,
-				87185D8D1ECDF14900F9CCA8 /* OptionsTests.swift in Sources */,
+				87185D8D1ECDF14900F9CCA8 /* CommandLineOptionsParserTests.swift in Sources */,
 				876451AC1ECE363A0042E347 /* InputFileReader.swift in Sources */,
 				876451B01ECE36450042E347 /* Paintshop.swift in Sources */,
 				877AAC951ECDD6360099D0A7 /* ColorTests.swift in Sources */,
@@ -316,7 +316,7 @@
 				8786E6541ECCD7BE007CBDBE /* Paintshop.swift in Sources */,
 				8786E6521ECCD798007CBDBE /* Customer.swift in Sources */,
 				8786E6481ECC8A57007CBDBE /* main.swift in Sources */,
-				8786E6571ECCD94E007CBDBE /* Options.swift in Sources */,
+				8786E6571ECCD94E007CBDBE /* CommandLineOptionsParser.swift in Sources */,
 				8786E65B1ECCF239007CBDBE /* Solver.swift in Sources */,
 				8786E6501ECCD782007CBDBE /* Color.swift in Sources */,
 			);
