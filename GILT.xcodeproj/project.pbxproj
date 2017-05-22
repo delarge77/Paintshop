@@ -18,7 +18,6 @@
 		87185D9B1ECE0EDD00F9CCA8 /* fixture4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D961ECE0EDD00F9CCA8 /* fixture4.txt */; };
 		87185D9C1ECE0EDD00F9CCA8 /* fixture5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D971ECE0EDD00F9CCA8 /* fixture5.txt */; };
 		87185D9E1ECE0F3000F9CCA8 /* invalid.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87185D9D1ECE0F3000F9CCA8 /* invalid.txt */; };
-		87212DCE1ECF792500067B75 /* fixture6.txt in Resources */ = {isa = PBXBuildFile; fileRef = 87212DCD1ECF792500067B75 /* fixture6.txt */; };
 		876451A91ECE1C7F0042E347 /* MockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876451A81ECE1C7F0042E347 /* MockProvider.swift */; };
 		876451AB1ECE36370042E347 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6561ECCD94E007CBDBE /* Options.swift */; };
 		876451AC1ECE363A0042E347 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6581ECCD966007CBDBE /* Input.swift */; };
@@ -61,7 +60,6 @@
 		87185D961ECE0EDD00F9CCA8 /* fixture4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fixture4.txt; path = fixtures/fixture4.txt; sourceTree = "<group>"; };
 		87185D971ECE0EDD00F9CCA8 /* fixture5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fixture5.txt; path = fixtures/fixture5.txt; sourceTree = "<group>"; };
 		87185D9D1ECE0F3000F9CCA8 /* invalid.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = invalid.txt; path = fixtures/invalid.txt; sourceTree = "<group>"; };
-		87212DCD1ECF792500067B75 /* fixture6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fixture6.txt; path = fixtures/fixture6.txt; sourceTree = "<group>"; };
 		876451A81ECE1C7F0042E347 /* MockProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockProvider.swift; path = MockProvider/MockProvider.swift; sourceTree = "<group>"; };
 		877AAC921ECDD6360099D0A7 /* GILTUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GILTUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		877AAC941ECDD6360099D0A7 /* ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorTests.swift; path = Models/ColorTests.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				87185D9D1ECE0F3000F9CCA8 /* invalid.txt */,
 				87185D931ECE0EDD00F9CCA8 /* fixture1.txt */,
 				87185D941ECE0EDD00F9CCA8 /* fixture2.txt */,
-				87212DCD1ECF792500067B75 /* fixture6.txt */,
 				87185D951ECE0EDD00F9CCA8 /* fixture3.txt */,
 				87185D961ECE0EDD00F9CCA8 /* fixture4.txt */,
 				87185D971ECE0EDD00F9CCA8 /* fixture5.txt */,
@@ -284,7 +281,6 @@
 				87185D981ECE0EDD00F9CCA8 /* fixture1.txt in Resources */,
 				87185D991ECE0EDD00F9CCA8 /* fixture2.txt in Resources */,
 				87185D9C1ECE0EDD00F9CCA8 /* fixture5.txt in Resources */,
-				87212DCE1ECF792500067B75 /* fixture6.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
