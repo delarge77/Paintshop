@@ -29,6 +29,11 @@ extension Paintshop {
             
             customers.append(customer)
         }
+
+        // TODO: Tratar caso onde o numero de cores é inválido
+//        guard numberOfColors == 2 else {
+//            return nil
+//        }
         
         self.numberOfColors = numberOfColors
         self.customers = customers

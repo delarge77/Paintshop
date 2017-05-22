@@ -8,10 +8,8 @@
 
 import Foundation
 
-struct Input {
-    let path: String
-    
-    func read() -> String? {
+struct InputFileReader {
+    func readFileAt(_ path: String) -> String? {
         let manager = FileManager.default
         if manager.fileExists(atPath: path) {
             guard let content = try? String(contentsOfFile: path) else {

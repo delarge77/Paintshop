@@ -17,8 +17,11 @@ class InputTests: XCTestCase {
             return
         }
         
-        let inputOne = Input(path: filePath)
-        let output = inputOne.read()
+        let reader = InputFileReader()
+        guard let output = reader.readFileAt(filePath) else {
+            return
+        }
+        print(output)
         
         ///////////
         
@@ -28,15 +31,18 @@ class InputTests: XCTestCase {
             return
         }
         
-        let inputError = Input(path: filePathError)
-        let error = inputError.read()
+        guard let error = reader.readFileAt(filePathError) else {
+            return
+        }
+        
+        print(error)
         
         ///////////
         
-        let input = Input(path: "")
-        let output1 = input.read()
-        
-        
+        guard let output1 = reader.readFileAt("") else {
+            return
+        }
+        print(output1)
     }
 
 }

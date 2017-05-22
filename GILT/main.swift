@@ -9,8 +9,8 @@
 import Foundation
 
 if let path = Options.read() {
-    let input = Input(path: path)
-    if let content = input.read() {
+    let reader = InputFileReader()
+    if let content = reader.readFileAt(path) {
         if let shop = Paintshop(string: content) {
             var solver = Solver(paintshop: shop)
             let result = solver.solve()
