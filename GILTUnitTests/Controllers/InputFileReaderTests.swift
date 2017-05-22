@@ -8,7 +8,7 @@
 
 import XCTest
 
-class InputTests: XCTestCase {
+class InputFileReaderTests: XCTestCase {
 
     func testInputFile() {
         let file = Bundle(for: type(of: self)).path(forResource: "fixture1", ofType: "txt")
