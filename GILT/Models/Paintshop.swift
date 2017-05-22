@@ -15,7 +15,7 @@ struct Paintshop {
 
 extension Paintshop {
     init(string: String) throws {
-        var lines = string.components(separatedBy: "\n").filter { !$0.isEmpty }
+        var lines = string.components(separatedBy: .newlines).filter { !$0.isEmpty }
         
         guard lines.count > 1 else {
             throw PaintshopError.InvalidFileFormat

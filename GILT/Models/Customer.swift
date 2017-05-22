@@ -15,7 +15,7 @@ struct Customer {
 extension Customer {
     init(string: String) throws {
         var options = [Paint]()
-        let items = string.components(separatedBy: " ")
+        let items = string.components(separatedBy: .whitespaces)
         
         for index in stride(from: 0, to: items.count, by: 2) {
             guard index < items.count, let color = Int(items[index]) else {
