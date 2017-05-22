@@ -8,7 +8,7 @@
 
 import XCTest
 
-class ColorTests: XCTestCase {
+class PaintTests: XCTestCase {
     
     func testColors() {
         let colorGloss = Paint(color: 1, finish: .Gloss)
@@ -23,12 +23,5 @@ class ColorTests: XCTestCase {
         
         XCTAssertEqual(colorGloss.finish, .Gloss)
         XCTAssertEqual(colorMatte.finish, .Matte)
-        
-        XCTAssertNotEqual(colorGloss.color, 2)
-        XCTAssertNotEqual(colorMatte.color, 2)
-        
-        XCTAssertNotEqual(colorGloss.finish, .Matte)
-        XCTAssertNotEqual(colorMatte.finish, .Gloss)
-        
     }
 }

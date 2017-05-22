@@ -29,7 +29,7 @@
 		876451AF1ECE36430042E347 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6511ECCD798007CBDBE /* Customer.swift */; };
 		876451B01ECE36450042E347 /* Paintshop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6531ECCD7BE007CBDBE /* Paintshop.swift */; };
 		876451B11ECE36480042E347 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6471ECC8A57007CBDBE /* main.swift */; };
-		877AAC951ECDD6360099D0A7 /* ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877AAC941ECDD6360099D0A7 /* ColorTests.swift */; };
+		877AAC951ECDD6360099D0A7 /* PaintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877AAC941ECDD6360099D0A7 /* PaintTests.swift */; };
 		8786E6481ECC8A57007CBDBE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6471ECC8A57007CBDBE /* main.swift */; };
 		8786E6501ECCD782007CBDBE /* Paint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E64F1ECCD782007CBDBE /* Paint.swift */; };
 		8786E6521ECCD798007CBDBE /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786E6511ECCD798007CBDBE /* Customer.swift */; };
@@ -69,7 +69,7 @@
 		871B1F641ED3543300407894 /* Finish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Finish.swift; path = Models/Finish.swift; sourceTree = "<group>"; };
 		876451A81ECE1C7F0042E347 /* MockProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockProvider.swift; path = MockProvider/MockProvider.swift; sourceTree = "<group>"; };
 		877AAC921ECDD6360099D0A7 /* GILTUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GILTUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		877AAC941ECDD6360099D0A7 /* ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorTests.swift; path = Models/ColorTests.swift; sourceTree = "<group>"; };
+		877AAC941ECDD6360099D0A7 /* PaintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PaintTests.swift; path = Models/PaintTests.swift; sourceTree = "<group>"; };
 		877AAC961ECDD6360099D0A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8786E6441ECC8A57007CBDBE /* GILT */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GILT; sourceTree = BUILT_PRODUCTS_DIR; };
 		8786E6471ECC8A57007CBDBE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		877AACA11ECDDA2C0099D0A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				877AAC941ECDD6360099D0A7 /* ColorTests.swift */,
+				877AAC941ECDD6360099D0A7 /* PaintTests.swift */,
 				87008D251ECDE15A008EC635 /* CustomerTests.swift */,
 				87008D271ECDE943008EC635 /* PaintshopTests.swift */,
 			);
@@ -315,7 +315,7 @@
 				87185D8D1ECDF14900F9CCA8 /* CommandLineOptionsParserTests.swift in Sources */,
 				876451AC1ECE363A0042E347 /* InputFileReader.swift in Sources */,
 				876451B01ECE36450042E347 /* Paintshop.swift in Sources */,
-				877AAC951ECDD6360099D0A7 /* ColorTests.swift in Sources */,
+				877AAC951ECDD6360099D0A7 /* PaintTests.swift in Sources */,
 				876451A91ECE1C7F0042E347 /* MockProvider.swift in Sources */,
 				87E511FC1ED356CA001C4427 /* Finish.swift in Sources */,
 			);

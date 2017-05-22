@@ -39,9 +39,9 @@ class PaintshopTests: XCTestCase {
         XCTAssertEqual(paintShop.customers[1].options[1].color, 3)
         XCTAssertEqual(paintShop.customers[1].options[2].color, 4)
         XCTAssertEqual(paintShop.customers[2].options[0].color, 5)
-        XCTAssertNotEqual(paintShop.customers[0].options[0].finish, .Gloss)
-        XCTAssertNotEqual(paintShop.customers[0].options[1].finish, .Matte)
-        XCTAssertNotEqual(paintShop.customers[0].options[2].finish, .Matte)
+        XCTAssertEqual(paintShop.customers[0].options[0].finish, .Matte)
+        XCTAssertEqual(paintShop.customers[0].options[1].finish, .Gloss)
+        XCTAssertEqual(paintShop.customers[0].options[2].finish, .Gloss)
     }
     
     func testPaintShopWithFixture2() {
@@ -61,8 +61,6 @@ class PaintshopTests: XCTestCase {
         XCTAssertEqual(paintShop.customers[1].options.count, 1)
         XCTAssertEqual(paintShop.customers[0].options[0].color, 1)
         XCTAssertEqual(paintShop.customers[1].options[0].color, 1)
-        XCTAssertNotEqual(paintShop.customers[0].options[0].finish, .Matte)
-        XCTAssertNotEqual(paintShop.customers[1].options[0].finish, .Gloss)
         XCTAssertEqual(paintShop.customers[0].options[0].finish, .Gloss)
         XCTAssertEqual(paintShop.customers[1].options[0].finish, .Matte)
     }

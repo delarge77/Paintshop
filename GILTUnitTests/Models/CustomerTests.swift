@@ -27,11 +27,6 @@ class CustomerTests: XCTestCase {
         XCTAssertEqual(customer.options[0].color, 1)
         XCTAssertEqual(customer.options[1].color, 1)
         XCTAssertEqual(customer.options[2].color, 2)
-        
-        XCTAssertNotEqual(customer.options[0].color, 2)
-        XCTAssertNotEqual(customer.options[1].color, 2)
-        XCTAssertNotEqual(customer.options[2].color, 1)
-        
     }
     
     func testSatisfiedCustomer() {
