@@ -52,15 +52,7 @@ struct Solver {
     }
     
     private func complete(_ solution: [Int: Color.Finish]) -> String {
-        var output: [Color.Finish] = []
-        for id in 1..<(paintshop.numberOfColors + 1) {
-            if let finish = solution[id] {
-                output.append(finish)
-            } else {
-                output.append(.Gloss)
-            }
-        }
-        
+        let output = (1...paintshop.numberOfColors).map { solution[$0] ?? .Gloss }
         return output.map { $0.rawValue }.joined(separator: " ")
     }
 }
