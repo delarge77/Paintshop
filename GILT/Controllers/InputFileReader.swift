@@ -13,7 +13,7 @@ struct InputFileReader {
         let manager = FileManager.default
         if manager.fileExists(atPath: path) {
             guard let content = try? String(contentsOfFile: path) else {
-                throw InputFileReaderError.InputFileWithError
+                throw InputFileReaderError.InvalidFileFormat
             }
             return content
         } else {
