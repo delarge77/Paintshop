@@ -24,13 +24,13 @@ class CustomerTests: XCTestCase {
         XCTAssertNotNil(customer.colors[1])
         XCTAssertNotNil(customer.colors[2])
         
-        XCTAssertEqual(customer.colors[0].id, Int(1))
-        XCTAssertEqual(customer.colors[1].id, Int(1))
-        XCTAssertEqual(customer.colors[2].id, Int(2))
+        XCTAssertEqual(customer.colors[0].id, 1)
+        XCTAssertEqual(customer.colors[1].id, 1)
+        XCTAssertEqual(customer.colors[2].id, 2)
         
-        XCTAssertNotEqual(customer.colors[0].id, Int(2))
-        XCTAssertNotEqual(customer.colors[1].id, Int(2))
-        XCTAssertNotEqual(customer.colors[2].id, Int(1))
+        XCTAssertNotEqual(customer.colors[0].id, 2)
+        XCTAssertNotEqual(customer.colors[1].id, 2)
+        XCTAssertNotEqual(customer.colors[2].id, 1)
         
     }
     
@@ -54,6 +54,24 @@ class CustomerTests: XCTestCase {
         XCTAssertEqual(customers[0].colors.count, 3)
         XCTAssertEqual(customers[1].colors.count, 3)
         XCTAssertEqual(customers[2].colors.count, 1)
+    }
+    
+    func testSatisfiedCustomer() {
+        guard let customer = Customer(string: "1 G 2 M 3 G") else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssertTrue(customer.satisfiedWith([1: .Gloss, 2: .Gloss, 3: .Gloss]))
+    }
+    
+    func testUnsatisfiedCustomer() {
+        guard let customer = Customer(string: "1 G 2 M 3 G") else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssertFalse(customer.satisfiedWith([1: .Matte, 2: .Gloss, 3: .Matte]))
     }
     
 }
