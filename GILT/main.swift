@@ -31,7 +31,7 @@ do {
 } catch PaintshopError.InvalidFileFormat {
     print("Invalid file format")
 } catch CustomerError.ColorNotSpecified {
-    print("Color Not Specified")
+    print("Color not specified")
 } catch CustomerError.FinishNotSpecified {
-    print("Finish Not Specified")
+    print("One of the colors doesn't have a finish specified")
 }
